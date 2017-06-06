@@ -26,7 +26,7 @@ typedef void(^__KeyboardBlock)(BOOL isShow,CGRect frame);
 /**
  添加通知
  */
-- (void)addNotification;
+- (void)addKeyboardNotification;
 
 
 /**

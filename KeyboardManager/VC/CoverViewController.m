@@ -20,13 +20,11 @@
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     
-    [self.tableView addNotification];
 }
 
 - (void)viewDidDisappear:(BOOL)animated{
     [super viewDidDisappear:animated];
     
-    [self.tableView removeNotification];
 }
 
 - (void)viewDidLoad {

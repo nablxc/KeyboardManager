@@ -7,10 +7,11 @@
 //
 
 #import "UIScrollView+KeyboardCover.h"
+#import "Header.h"
 #import <objc/runtime.h>
 
 #define Observer_Key @"hidden"
-#define For_I 20
+#define For_I 10
 
 @interface UIScrollView()
 
@@ -48,10 +49,37 @@ static char *keyboardBlockKey = "oldFrameKey";
     
     self.oldFrame = self.frame;
     
-    [self addNotification];
+    [self addViewControllerCycleNotice];
     
     self.keyboardDismissMode = UIScrollViewKeyboardDismissModeOnDrag;
 }
+
+- (void)addViewControllerCycleNotice
+{
+    [self removeNotification];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(viewControllerViewDidAppear:) name:NOTIFICATION_DIDAPPEAR object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(viewControllerViewDidDisappear:) name:NOTIFICATION_DIDDISAPPEAR object:nil];
+    
+}
+
+- (void)viewControllerViewDidAppear:(NSNotification *)notification
+{
+    if ([self viewController] == notification.userInfo[NOTIFICATION_KEY_VC])
+    {
+        [self addKeyboardNotification];
+    }
+}
+
+- (void)viewControllerViewDidDisappear:(NSNotification *)notification
+{
+    if ([self viewController] == notification.userInfo[NOTIFICATION_KEY_VC])
+    {
+        [self removeNotification];
+    }
+}
+
 
 #pragma mark 键盘默认触摸模式
 - (void)defaultKeyboardDismissMode
@@ -65,7 +93,7 @@ static char *keyboardBlockKey = "oldFrameKey";
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 #pragma mark 添加键盘监听
-- (void)addNotification{
+- (void)addKeyboardNotification{
     
     [self removeNotification];
     
@@ -273,7 +301,18 @@ static char *keyboardBlockKey = "oldFrameKey";
     UIView *firstResponder = [keyWindow performSelector:@selector(firstResponder)];
     return firstResponder;
 }
-
+- (UIViewController *)viewController
+{
+    for (UIView* next = [self superview]; next; next = next.superview)
+    {
+        UIResponder *nextResponder = [next nextResponder];
+        if ([nextResponder isKindOfClass:[UIViewController class]])
+        {
+            return (UIViewController *)nextResponder;
+        }
+    }
+    return nil;
+}
 
 - (void)dealloc
 {

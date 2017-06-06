@@ -8,6 +8,7 @@
 
 #import "UIViewController+KeyboardNotice.h"
 #import <objc/runtime.h>
+#import "Header.h"
 @implementation UIViewController (KeyboardNotice)
 
 + (void)load{
@@ -43,13 +44,15 @@
     //这时候调用自己，看起来像是死循环
     //但是其实自己的实现已经被替换了
         [self swiz_viewDidAppear:animated];
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"" object:@{@"vc":self}];
+    [[NSNotificationCenter defaultCenter] postNotificationName:NOTIFICATION_DIDAPPEAR object:nil userInfo:@{NOTIFICATION_KEY_VC:self}];
+    
 }
 
 - (void)swiz_viewDidDisappear:(BOOL)animated
 {
     [self swiz_viewDidDisappear:animated];
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"" object:@{@"vc":self}];
+    [[NSNotificationCenter defaultCenter] postNotificationName:NOTIFICATION_DIDDISAPPEAR object:nil userInfo:@{NOTIFICATION_KEY_VC:self}];
+    
 }
 
 @end
