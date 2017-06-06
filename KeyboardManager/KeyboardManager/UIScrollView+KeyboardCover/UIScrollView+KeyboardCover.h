@@ -13,7 +13,7 @@ typedef void(^__KeyboardBlock)(BOOL isShow,CGRect frame);
 @interface UIScrollView (KeyboardCover)
 
 /**
- 绑定方法 默认开启键盘触摸消失
+ 绑定方法 默认开启键盘触摸消失 ps:只用调用这一个方法
  */
 - (void)automaticSolveKeyboardCover;
 

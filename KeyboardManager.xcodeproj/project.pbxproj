@@ -41,7 +41,7 @@
 		695E1AEE1EE66A6200D6AA27 /* UITextField+ExtentRange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+ExtentRange.h"; sourceTree = "<group>"; };
 		695E1AEF1EE66A6200D6AA27 /* UITextField+ExtentRange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+ExtentRange.m"; sourceTree = "<group>"; };
 		695E1AF11EE66A6200D6AA27 /* UIScrollView+KeyboardCover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+KeyboardCover.h"; sourceTree = "<group>"; };
-		695E1AF21EE66A6200D6AA27 /* UIScrollView+KeyboardCover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+KeyboardCover.m"; sourceTree = "<group>"; };
+		695E1AF21EE66A6200D6AA27 /* UIScrollView+KeyboardCover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = "UIScrollView+KeyboardCover.m"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		695E1AFD1EE67FAC00D6AA27 /* IDCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IDCardViewController.h; path = VC/IDCardViewController.h; sourceTree = "<group>"; };
 		695E1AFE1EE67FAC00D6AA27 /* IDCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IDCardViewController.m; path = VC/IDCardViewController.m; sourceTree = "<group>"; };
 		695E1B021EE67FE500D6AA27 /* IDCardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = IDCardViewController.xib; path = VC/IDCardViewController.xib; sourceTree = "<group>"; };
@@ -52,8 +52,8 @@
 		695E1B0C1EE6868800D6AA27 /* TextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TextCell.m; path = VC/TextCell.m; sourceTree = "<group>"; };
 		695E1B0D1EE6868800D6AA27 /* TextCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TextCell.xib; path = VC/TextCell.xib; sourceTree = "<group>"; };
 		695E1B111EE6B02000D6AA27 /* UIViewController+KeyboardNotice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+KeyboardNotice.h"; sourceTree = "<group>"; };
-		695E1B121EE6B02000D6AA27 /* UIViewController+KeyboardNotice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+KeyboardNotice.m"; sourceTree = "<group>"; };
-		69DFAD9C1EE6DAFF00414589 /* Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		695E1B121EE6B02000D6AA27 /* UIViewController+KeyboardNotice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = "UIViewController+KeyboardNotice.m"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		69DFAD9C1EE6DAFF00414589 /* Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = Header.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */

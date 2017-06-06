@@ -9,6 +9,7 @@
 #import "UIScrollView+KeyboardCover.h"
 #import "Header.h"
 #import <objc/runtime.h>
+#import "UIViewController+KeyboardNotice.h"
 
 #define Observer_Key @"hidden"
 #define For_I 10
@@ -49,21 +50,24 @@ static char *keyboardBlockKey = "oldFrameKey";
     
     self.oldFrame = self.frame;
     
+    [self postBindSuccessNotice];
+    
     [self addViewControllerCycleNotice];
     
     self.keyboardDismissMode = UIScrollViewKeyboardDismissModeOnDrag;
 }
 
+#pragma mark 接收视图控制器生命周期的通知
 - (void)addViewControllerCycleNotice
 {
     [self removeNotification];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(viewControllerViewDidAppear:) name:NOTIFICATION_DIDAPPEAR object:nil];
+    [NOTIFICATION_CENTER addObserver:self selector:@selector(viewControllerViewDidAppear:) name:NOTIFICATION_DIDAPPEAR object:nil];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(viewControllerViewDidDisappear:) name:NOTIFICATION_DIDDISAPPEAR object:nil];
+    [NOTIFICATION_CENTER addObserver:self selector:@selector(viewControllerViewDidDisappear:) name:NOTIFICATION_DIDDISAPPEAR object:nil];
     
 }
-
+//视图已经显示
 - (void)viewControllerViewDidAppear:(NSNotification *)notification
 {
     if ([self viewController] == notification.userInfo[NOTIFICATION_KEY_VC])
@@ -71,7 +75,7 @@ static char *keyboardBlockKey = "oldFrameKey";
         [self addKeyboardNotification];
     }
 }
-
+//视图已经消失
 - (void)viewControllerViewDidDisappear:(NSNotification *)notification
 {
     if ([self viewController] == notification.userInfo[NOTIFICATION_KEY_VC])
@@ -80,6 +84,12 @@ static char *keyboardBlockKey = "oldFrameKey";
     }
 }
 
+//发送绑定成功的通知
+- (void)postBindSuccessNotice
+{
+    UIViewController *vc = [self viewController];
+    vc.needNotice = YES;
+}
 
 #pragma mark 键盘默认触摸模式
 - (void)defaultKeyboardDismissMode
@@ -90,14 +100,14 @@ static char *keyboardBlockKey = "oldFrameKey";
 #pragma mark 键盘监听
 - (void)removeNotification{
     
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    [NOTIFICATION_CENTER removeObserver:self];
 }
 #pragma mark 添加键盘监听
 - (void)addKeyboardNotification{
     
     [self removeNotification];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillChangeFrame:) name:UIKeyboardWillChangeFrameNotification object:nil];
+    [NOTIFICATION_CENTER addObserver:self selector:@selector(keyboardWillChangeFrame:) name:UIKeyboardWillChangeFrameNotification object:nil];
     
 }
 
@@ -317,7 +327,7 @@ static char *keyboardBlockKey = "oldFrameKey";
 - (void)dealloc
 {
     
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    [NOTIFICATION_CENTER removeObserver:self];
 }
 
 

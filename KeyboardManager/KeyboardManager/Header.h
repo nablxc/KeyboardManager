@@ -26,8 +26,11 @@
 
 #define TOPCAIL_COLOR UIColorFromRGB(0x1dc4ad)
 
+#define NOTIFICATION_CENTER [NSNotificationCenter defaultCenter]
+
 #define NOTIFICATION_DIDAPPEAR @"viewDidAppear"
 #define NOTIFICATION_DIDDISAPPEAR @"viewDidDisappear"
+#define NOTIFICATION_BIND @"BindSuccess"
 #define NOTIFICATION_KEY_VC @"vc"
 
 #endif /* Header_h */

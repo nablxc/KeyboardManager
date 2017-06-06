@@ -10,4 +10,9 @@
 
 @interface UIViewController (KeyboardNotice)
 
+/**
+ 是否需要发通知 优化操作,让系统只发一次通知
+ */
+@property (nonatomic,assign)BOOL needNotice;
+
 @end

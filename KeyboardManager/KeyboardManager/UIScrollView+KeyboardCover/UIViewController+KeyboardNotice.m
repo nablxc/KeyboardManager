@@ -9,6 +9,11 @@
 #import "UIViewController+KeyboardNotice.h"
 #import <objc/runtime.h>
 #import "Header.h"
+
+@interface UIViewController()
+
+@end
+
 @implementation UIViewController (KeyboardNotice)
 
 + (void)load{
@@ -19,6 +24,7 @@
         [UIViewController useCustomSel:@selector(swiz_viewDidAppear:) exchangeSystemSel:@selector(viewDidAppear:)];
         
         [UIViewController useCustomSel:@selector(swiz_viewDidDisappear:) exchangeSystemSel:@selector(viewDidDisappear:)];
+
     });
 }
 
@@ -38,21 +44,41 @@
     }
 
 }
+static char *needNoticeKey = "needNoticeKey";
+- (void)setNeedNotice:(BOOL)needNotice
+{
+    objc_setAssociatedObject(self, needNoticeKey, @(needNotice), OBJC_ASSOCIATION_ASSIGN);
+}
+
+- (BOOL)needNotice
+{
+    NSNumber *number = objc_getAssociatedObject(self, needNoticeKey);
+    return number.boolValue;
+}
+
 
 - (void)swiz_viewDidAppear:(BOOL)animated
 {
     //这时候调用自己，看起来像是死循环
     //但是其实自己的实现已经被替换了
         [self swiz_viewDidAppear:animated];
-    [[NSNotificationCenter defaultCenter] postNotificationName:NOTIFICATION_DIDAPPEAR object:nil userInfo:@{NOTIFICATION_KEY_VC:self}];
+    if (self.needNotice == YES)
+    {
+        [NOTIFICATION_CENTER postNotificationName:NOTIFICATION_DIDAPPEAR object:nil userInfo:@{NOTIFICATION_KEY_VC:self}];
+    }
     
 }
 
 - (void)swiz_viewDidDisappear:(BOOL)animated
 {
     [self swiz_viewDidDisappear:animated];
-    [[NSNotificationCenter defaultCenter] postNotificationName:NOTIFICATION_DIDDISAPPEAR object:nil userInfo:@{NOTIFICATION_KEY_VC:self}];
-    
+    if (self.needNotice == YES)
+    {
+        [NOTIFICATION_CENTER postNotificationName:NOTIFICATION_DIDDISAPPEAR object:nil userInfo:@{NOTIFICATION_KEY_VC:self}];
+    }
 }
+
+
+
 
 @end
