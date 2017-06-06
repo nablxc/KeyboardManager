@@ -54,6 +54,8 @@
         
         _textField.inputView = self;
         
+        [_textField addTarget:self action:@selector(textChange:) forControlEvents:UIControlEventValueChanged];
+        
         _line = 0.4f;
     }
     return self;
@@ -120,7 +122,7 @@
                 //横线
                  [self drawLine:CGRectMake(0, i * height, SCREEN_WIDTH, _line)];
             }
-            NSLog(@"%@",NSStringFromCGRect(button.frame));
+
         }
     }
 }
@@ -136,8 +138,6 @@
 - (void)buttonClick:(UIButton *)btn{
     NSInteger tag = btn.tag;
     NSString *keyStr = _keyArr[tag / 10][tag % 10];
-    
-    NSLog(@"%@",NSStringFromCGRect(btn.frame));
     
     if (!([keyStr isEqualToString:Delete]))
     {
@@ -247,6 +247,12 @@
         _textField.selectedRange = NSMakeRange(location, 0);
     }
 }
+
+- (void)textChange:(UITextField *)textField
+{
+    
+}
+
 #pragma mark 颜色生成图片
 - (UIImage*)createImageWithColor:(UIColor*) color
 {

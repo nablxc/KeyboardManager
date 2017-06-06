@@ -22,6 +22,7 @@
 		695E1B091EE6837D00D6AA27 /* CoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 695E1B071EE6837D00D6AA27 /* CoverViewController.xib */; };
 		695E1B0E1EE6868800D6AA27 /* TextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 695E1B0C1EE6868800D6AA27 /* TextCell.m */; };
 		695E1B0F1EE6868800D6AA27 /* TextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 695E1B0D1EE6868800D6AA27 /* TextCell.xib */; };
+		695E1B131EE6B02000D6AA27 /* UIViewController+KeyboardNotice.m in Sources */ = {isa = PBXBuildFile; fileRef = 695E1B121EE6B02000D6AA27 /* UIViewController+KeyboardNotice.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,8 @@
 		695E1B0B1EE6868800D6AA27 /* TextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TextCell.h; path = VC/TextCell.h; sourceTree = "<group>"; };
 		695E1B0C1EE6868800D6AA27 /* TextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TextCell.m; path = VC/TextCell.m; sourceTree = "<group>"; };
 		695E1B0D1EE6868800D6AA27 /* TextCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TextCell.xib; path = VC/TextCell.xib; sourceTree = "<group>"; };
+		695E1B111EE6B02000D6AA27 /* UIViewController+KeyboardNotice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+KeyboardNotice.h"; sourceTree = "<group>"; };
+		695E1B121EE6B02000D6AA27 /* UIViewController+KeyboardNotice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+KeyboardNotice.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +133,8 @@
 			children = (
 				695E1AF11EE66A6200D6AA27 /* UIScrollView+KeyboardCover.h */,
 				695E1AF21EE66A6200D6AA27 /* UIScrollView+KeyboardCover.m */,
+				695E1B111EE6B02000D6AA27 /* UIViewController+KeyboardNotice.h */,
+				695E1B121EE6B02000D6AA27 /* UIViewController+KeyboardNotice.m */,
 			);
 			path = "UIScrollView+KeyboardCover";
 			sourceTree = "<group>";
@@ -252,6 +257,7 @@
 				695E1AF51EE66A6200D6AA27 /* UIScrollView+KeyboardCover.m in Sources */,
 				695E1AF41EE66A6200D6AA27 /* UITextField+ExtentRange.m in Sources */,
 				695E1ADA1EE669DE00D6AA27 /* ViewController.m in Sources */,
+				695E1B131EE6B02000D6AA27 /* UIViewController+KeyboardNotice.m in Sources */,
 				695E1B0E1EE6868800D6AA27 /* TextCell.m in Sources */,
 				695E1B001EE67FAC00D6AA27 /* IDCardViewController.m in Sources */,
 				695E1AD71EE669DE00D6AA27 /* AppDelegate.m in Sources */,
@@ -420,6 +426,7 @@
 				695E1AE81EE669DE00D6AA27 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
