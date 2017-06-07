@@ -14,25 +14,22 @@ typedef void(^__KeyboardBlock)(BOOL isShow,CGRect frame);
 
 /**
  绑定方法 默认开启键盘触摸消失 ps:只用调用这一个方法
+ 方法一定要视图添加到VC上后调用
  */
 - (void)automaticSolveKeyboardCover;
 
+
+/**
+ 绑定方法 带键盘显示弹出block 已经集成好动画
+  方法一定要视图添加到VC上后调用
+ */
+- (void)automaticSolveKeyboardCoverWithBlock:(__KeyboardBlock)keyboardBlock;
 
 /**
  键盘默认触摸模式
  */
 - (void)defaultKeyboardDismissMode;
 
-/**
- 添加通知
- */
-- (void)addKeyboardNotification;
-
-
-/**
- 移除通知
- */
-- (void)removeNotification;
 
 @property (nonatomic,copy)__KeyboardBlock keyboardBlock;
 

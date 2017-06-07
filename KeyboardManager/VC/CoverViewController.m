@@ -33,10 +33,29 @@
     
     self.title = @"键盘自动处理";
     
-    [self.tableView automaticSolveKeyboardCover];
+    
     
     self.tableView.tableHeaderView = [self tableHeaderView];
     
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 668 - 64 + 30, 30, 30)];
+    view.backgroundColor = [UIColor cyanColor];
+    [self.view addSubview:view];
+    
+    [self.tableView automaticSolveKeyboardCoverWithBlock:^(BOOL isShow, CGRect frame) {
+        if (isShow)
+        {
+            view.transform = CGAffineTransformMakeTranslation(0, -frame.size.height);
+        }
+        else
+        {
+            view.transform = CGAffineTransformMakeTranslation(0, 0);
+        }
+    }];
+    
+//    [self.tableView setKeyboardBlock:^(BOOL isShow,CGRect frame){
+//        
+//    }];
+//    
     //    self.tableView.hidden = YES;
     
 }
@@ -133,7 +152,10 @@
     }
 }
 
+- (void)dealloc
+{
 
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

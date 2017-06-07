@@ -22,6 +22,7 @@
     self.title = @"身份键盘";
     
     [KeyboardX keyboardXAddIn:self.textfield];
+    
 }
 
 - (void)didReceiveMemoryWarning {

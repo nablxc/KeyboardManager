@@ -35,7 +35,7 @@ static char *oldFrameKey = "oldFrameKey";
     return oldFrame;
 }
 
-static char *keyboardBlockKey = "oldFrameKey";
+static char *keyboardBlockKey = "keyboardBlockKey";
 - (void)setKeyboardBlock:(__KeyboardBlock)keyboardBlock
 {
      objc_setAssociatedObject(self, keyboardBlockKey, keyboardBlock, OBJC_ASSOCIATION_COPY);
@@ -46,8 +46,22 @@ static char *keyboardBlockKey = "oldFrameKey";
 }
 
 #pragma mark 捆绑方法
-- (void)automaticSolveKeyboardCover{
+- (void)automaticSolveKeyboardCover
+{
     
+    [self bindHandle];
+}
+#pragma mark 捆绑方法 带键盘弹出的block
+- (void)automaticSolveKeyboardCoverWithBlock:(__KeyboardBlock)keyboardBlock
+{
+    self.keyboardBlock = keyboardBlock;
+    
+    [self bindHandle];
+}
+
+#pragma mark 绑定的方法
+- (void)bindHandle
+{
     self.oldFrame = self.frame;
     
     [self postBindSuccessNotice];
@@ -143,10 +157,19 @@ static char *keyboardBlockKey = "oldFrameKey";
     {
         if (beginFromBotom) return;
         [self _willShowBottomHeight:0];
+        
+        if (self.keyboardBlock)
+        {
+            self.keyboardBlock(NO, toFrame);
+        }
     }
     else
     {
         [self _willShowBottomHeight:toFrame.size.height];
+        if (self.keyboardBlock)
+        {
+            self.keyboardBlock(YES, toFrame);
+        }
     }
     [self scrollToSomeWhere:place];
 }
@@ -324,11 +347,6 @@ static char *keyboardBlockKey = "oldFrameKey";
     return nil;
 }
 
-- (void)dealloc
-{
-    
-    [NOTIFICATION_CENTER removeObserver:self];
-}
 
 
 
