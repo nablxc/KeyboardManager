@@ -15,3 +15,7 @@
 
 键盘遮挡:
 给UIScrollView添加分类,将键盘的高度变化通知集成于分类中.利用runtime在UIViewController的生命周期方法中(viewDidAppear:和viewDidDisappear:)追加发送一个通知.在UIScrollView的分类中接收该通知,从而达到添加移除键盘的通知.
+
+## 提交记录
+
+17.6.7 移除了测试时候使用dealloc函数,添加了键盘弹出和消失的block,且内部已经处理了相应的动画效果
