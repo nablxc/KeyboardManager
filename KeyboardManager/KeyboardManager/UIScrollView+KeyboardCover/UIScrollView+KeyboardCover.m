@@ -78,7 +78,7 @@ static char *keyboardBlockKey = "keyboardBlockKey";
     
     [NOTIFICATION_CENTER addObserver:self selector:@selector(viewControllerViewDidAppear:) name:NOTIFICATION_DIDAPPEAR object:nil];
     
-    [NOTIFICATION_CENTER addObserver:self selector:@selector(viewControllerViewDidDisappear:) name:NOTIFICATION_DIDDISAPPEAR object:nil];
+    [NOTIFICATION_CENTER addObserver:self selector:@selector(viewControllerViewWiilDisappear:) name:NOTIFICATION_WILLDISAPPEAR object:nil];
     
 }
 //视图已经显示
@@ -89,8 +89,8 @@ static char *keyboardBlockKey = "keyboardBlockKey";
         [self addKeyboardNotification];
     }
 }
-//视图已经消失
-- (void)viewControllerViewDidDisappear:(NSNotification *)notification
+//视图即将消失
+- (void)viewControllerViewWiilDisappear:(NSNotification *)notification
 {
     if ([self viewController] == notification.userInfo[NOTIFICATION_KEY_VC])
     {
@@ -114,7 +114,7 @@ static char *keyboardBlockKey = "keyboardBlockKey";
 #pragma mark 键盘监听
 - (void)removeNotification{
     
-    [NOTIFICATION_CENTER removeObserver:self];
+    [NOTIFICATION_CENTER removeObserver:self name:UIKeyboardWillChangeFrameNotification object:nil];
 }
 #pragma mark 添加键盘监听
 - (void)addKeyboardNotification{

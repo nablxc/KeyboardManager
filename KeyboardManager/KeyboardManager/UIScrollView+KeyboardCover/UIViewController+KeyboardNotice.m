@@ -23,7 +23,7 @@
        
         [UIViewController useCustomSel:@selector(swiz_viewDidAppear:) exchangeSystemSel:@selector(viewDidAppear:)];
         
-        [UIViewController useCustomSel:@selector(swiz_viewDidDisappear:) exchangeSystemSel:@selector(viewDidDisappear:)];
+        [UIViewController useCustomSel:@selector(swiz_viewWillDisappear:) exchangeSystemSel:@selector(viewWillDisappear:)];
 
     });
 }
@@ -69,12 +69,12 @@ static char *needNoticeKey = "needNoticeKey";
     
 }
 
-- (void)swiz_viewDidDisappear:(BOOL)animated
+- (void)swiz_viewWillDisappear:(BOOL)animated
 {
-    [self swiz_viewDidDisappear:animated];
+    [self swiz_viewWillDisappear:animated];
     if (self.needNotice == YES)
     {
-        [NOTIFICATION_CENTER postNotificationName:NOTIFICATION_DIDDISAPPEAR object:nil userInfo:@{NOTIFICATION_KEY_VC:self}];
+        [NOTIFICATION_CENTER postNotificationName:NOTIFICATION_WILLDISAPPEAR object:nil userInfo:@{NOTIFICATION_KEY_VC:self}];
     }
 }
 

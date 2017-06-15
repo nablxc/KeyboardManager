@@ -16,7 +16,29 @@
 
 @end
 
+
+
 @implementation ViewController
+//必须在这两个里面执行 注册 和 移除
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+     NSLog(@"%@ %@",NSStringFromClass([self class]),NSStringFromSelector(_cmd));
+}
+
+- (void)viewDidDisappear:(BOOL)animated{
+    [super viewDidDisappear:animated];
+     NSLog(@"%@ %@",NSStringFromClass([self class]),NSStringFromSelector(_cmd));
+}
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+     NSLog(@"%@ %@",NSStringFromClass([self class]),NSStringFromSelector(_cmd));
+}
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+     NSLog(@"%@ %@",NSStringFromClass([self class]),NSStringFromSelector(_cmd));
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

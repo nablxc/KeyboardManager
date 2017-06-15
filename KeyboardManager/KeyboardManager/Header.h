@@ -29,7 +29,7 @@
 #define NOTIFICATION_CENTER [NSNotificationCenter defaultCenter]
 
 #define NOTIFICATION_DIDAPPEAR @"viewDidAppear"
-#define NOTIFICATION_DIDDISAPPEAR @"viewDidDisappear"
+#define NOTIFICATION_WILLDISAPPEAR @"viewWillDisappear"
 #define NOTIFICATION_BIND @"BindSuccess"
 #define NOTIFICATION_KEY_VC @"vc"
 
