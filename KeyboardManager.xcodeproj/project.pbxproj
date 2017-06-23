@@ -53,7 +53,7 @@
 		695E1B0D1EE6868800D6AA27 /* TextCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TextCell.xib; path = VC/TextCell.xib; sourceTree = "<group>"; };
 		695E1B111EE6B02000D6AA27 /* UIViewController+KeyboardNotice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+KeyboardNotice.h"; sourceTree = "<group>"; };
 		695E1B121EE6B02000D6AA27 /* UIViewController+KeyboardNotice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = "UIViewController+KeyboardNotice.m"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		69DFAD9C1EE6DAFF00414589 /* Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = Header.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		697FA3841EFCA80200132A16 /* KeyboardManagerHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeyboardManagerHeader.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,7 +112,7 @@
 		695E1AEA1EE66A6200D6AA27 /* KeyboardManager */ = {
 			isa = PBXGroup;
 			children = (
-				69DFAD9C1EE6DAFF00414589 /* Header.h */,
+				697FA3841EFCA80200132A16 /* KeyboardManagerHeader.h */,
 				695E1AEB1EE66A6200D6AA27 /* KeyboardX */,
 				695E1AF01EE66A6200D6AA27 /* UIScrollView+KeyboardCover */,
 			);

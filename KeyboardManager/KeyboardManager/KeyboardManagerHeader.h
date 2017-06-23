@@ -1,5 +1,5 @@
 //
-//  Header.h
+//  KeyboardManagerHeader.h
 //  KeyboardManager
 //
 //  Created by 刘星辰 on 2017/6/6.

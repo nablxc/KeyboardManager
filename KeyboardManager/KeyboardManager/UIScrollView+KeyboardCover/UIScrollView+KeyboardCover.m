@@ -7,7 +7,7 @@
 //
 
 #import "UIScrollView+KeyboardCover.h"
-#import "Header.h"
+#import "KeyboardManagerHeader.h"
 #import <objc/runtime.h>
 #import "UIViewController+KeyboardNotice.h"
 

@@ -8,7 +8,7 @@
 
 #import "KeyboardX.h"
 #import "UITextField+ExtentRange.h"
-#import "Header.h"
+#import "KeyboardManagerHeader.h"
 #define Max_Num 18 //身份证位数
 
 @interface KeyboardX()
