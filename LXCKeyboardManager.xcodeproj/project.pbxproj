@@ -7,52 +7,53 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		695E1AD41EE669DE00D6AA27 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 695E1AD31EE669DE00D6AA27 /* main.m */; };
-		695E1AD71EE669DE00D6AA27 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 695E1AD61EE669DE00D6AA27 /* AppDelegate.m */; };
-		695E1ADA1EE669DE00D6AA27 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 695E1AD91EE669DE00D6AA27 /* ViewController.m */; };
-		695E1ADD1EE669DE00D6AA27 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 695E1ADB1EE669DE00D6AA27 /* Main.storyboard */; };
-		695E1ADF1EE669DE00D6AA27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 695E1ADE1EE669DE00D6AA27 /* Assets.xcassets */; };
-		695E1AE21EE669DE00D6AA27 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 695E1AE01EE669DE00D6AA27 /* LaunchScreen.storyboard */; };
-		695E1AF31EE66A6200D6AA27 /* KeyboardX.m in Sources */ = {isa = PBXBuildFile; fileRef = 695E1AED1EE66A6200D6AA27 /* KeyboardX.m */; };
-		695E1AF41EE66A6200D6AA27 /* UITextField+ExtentRange.m in Sources */ = {isa = PBXBuildFile; fileRef = 695E1AEF1EE66A6200D6AA27 /* UITextField+ExtentRange.m */; };
-		695E1AF51EE66A6200D6AA27 /* UIScrollView+KeyboardCover.m in Sources */ = {isa = PBXBuildFile; fileRef = 695E1AF21EE66A6200D6AA27 /* UIScrollView+KeyboardCover.m */; };
-		695E1B001EE67FAC00D6AA27 /* IDCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 695E1AFE1EE67FAC00D6AA27 /* IDCardViewController.m */; };
-		695E1B031EE67FE500D6AA27 /* IDCardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 695E1B021EE67FE500D6AA27 /* IDCardViewController.xib */; };
-		695E1B081EE6837D00D6AA27 /* CoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 695E1B061EE6837D00D6AA27 /* CoverViewController.m */; };
-		695E1B091EE6837D00D6AA27 /* CoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 695E1B071EE6837D00D6AA27 /* CoverViewController.xib */; };
-		695E1B0E1EE6868800D6AA27 /* TextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 695E1B0C1EE6868800D6AA27 /* TextCell.m */; };
-		695E1B0F1EE6868800D6AA27 /* TextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 695E1B0D1EE6868800D6AA27 /* TextCell.xib */; };
-		695E1B131EE6B02000D6AA27 /* UIViewController+KeyboardNotice.m in Sources */ = {isa = PBXBuildFile; fileRef = 695E1B121EE6B02000D6AA27 /* UIViewController+KeyboardNotice.m */; };
+		6989BE201F0F5CCB00CC92BF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6989BE011F0F5CCB00CC92BF /* AppDelegate.m */; };
+		6989BE211F0F5CCB00CC92BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6989BE021F0F5CCB00CC92BF /* Assets.xcassets */; };
+		6989BE221F0F5CCB00CC92BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6989BE031F0F5CCB00CC92BF /* LaunchScreen.storyboard */; };
+		6989BE231F0F5CCB00CC92BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6989BE051F0F5CCB00CC92BF /* Main.storyboard */; };
+		6989BE241F0F5CCB00CC92BF /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6989BE071F0F5CCB00CC92BF /* Info.plist */; };
+		6989BE251F0F5CCB00CC92BF /* KeyboardX.m in Sources */ = {isa = PBXBuildFile; fileRef = 6989BE0B1F0F5CCB00CC92BF /* KeyboardX.m */; };
+		6989BE261F0F5CCB00CC92BF /* UITextField+ExtentRange.m in Sources */ = {isa = PBXBuildFile; fileRef = 6989BE0D1F0F5CCB00CC92BF /* UITextField+ExtentRange.m */; };
+		6989BE271F0F5CCB00CC92BF /* UIScrollView+KeyboardCover.m in Sources */ = {isa = PBXBuildFile; fileRef = 6989BE101F0F5CCB00CC92BF /* UIScrollView+KeyboardCover.m */; };
+		6989BE281F0F5CCB00CC92BF /* UIViewController+KeyboardNotice.m in Sources */ = {isa = PBXBuildFile; fileRef = 6989BE121F0F5CCB00CC92BF /* UIViewController+KeyboardNotice.m */; };
+		6989BE291F0F5CCB00CC92BF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6989BE131F0F5CCB00CC92BF /* main.m */; };
+		6989BE2A1F0F5CCB00CC92BF /* CoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6989BE161F0F5CCB00CC92BF /* CoverViewController.m */; };
+		6989BE2B1F0F5CCB00CC92BF /* CoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6989BE171F0F5CCB00CC92BF /* CoverViewController.xib */; };
+		6989BE2C1F0F5CCB00CC92BF /* IDCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6989BE191F0F5CCB00CC92BF /* IDCardViewController.m */; };
+		6989BE2D1F0F5CCB00CC92BF /* IDCardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6989BE1A1F0F5CCB00CC92BF /* IDCardViewController.xib */; };
+		6989BE2E1F0F5CCB00CC92BF /* TextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6989BE1C1F0F5CCB00CC92BF /* TextCell.m */; };
+		6989BE2F1F0F5CCB00CC92BF /* TextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6989BE1D1F0F5CCB00CC92BF /* TextCell.xib */; };
+		6989BE301F0F5CCB00CC92BF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6989BE1F1F0F5CCB00CC92BF /* ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		695E1ACF1EE669DE00D6AA27 /* LXCKeyboardManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LXCKeyboardManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		695E1AD31EE669DE00D6AA27 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		695E1AD51EE669DE00D6AA27 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		695E1AD61EE669DE00D6AA27 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		695E1AD81EE669DE00D6AA27 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		695E1AD91EE669DE00D6AA27 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		695E1ADC1EE669DE00D6AA27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		695E1ADE1EE669DE00D6AA27 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		695E1AE11EE669DE00D6AA27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		695E1AE31EE669DE00D6AA27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		695E1AEC1EE66A6200D6AA27 /* KeyboardX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyboardX.h; sourceTree = "<group>"; };
-		695E1AED1EE66A6200D6AA27 /* KeyboardX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyboardX.m; sourceTree = "<group>"; };
-		695E1AEE1EE66A6200D6AA27 /* UITextField+ExtentRange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+ExtentRange.h"; sourceTree = "<group>"; };
-		695E1AEF1EE66A6200D6AA27 /* UITextField+ExtentRange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+ExtentRange.m"; sourceTree = "<group>"; };
-		695E1AF11EE66A6200D6AA27 /* UIScrollView+KeyboardCover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+KeyboardCover.h"; sourceTree = "<group>"; };
-		695E1AF21EE66A6200D6AA27 /* UIScrollView+KeyboardCover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = "UIScrollView+KeyboardCover.m"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		695E1AFD1EE67FAC00D6AA27 /* IDCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IDCardViewController.h; path = VC/IDCardViewController.h; sourceTree = "<group>"; };
-		695E1AFE1EE67FAC00D6AA27 /* IDCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IDCardViewController.m; path = VC/IDCardViewController.m; sourceTree = "<group>"; };
-		695E1B021EE67FE500D6AA27 /* IDCardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = IDCardViewController.xib; path = VC/IDCardViewController.xib; sourceTree = "<group>"; };
-		695E1B051EE6837D00D6AA27 /* CoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoverViewController.h; path = VC/CoverViewController.h; sourceTree = "<group>"; };
-		695E1B061EE6837D00D6AA27 /* CoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoverViewController.m; path = VC/CoverViewController.m; sourceTree = "<group>"; };
-		695E1B071EE6837D00D6AA27 /* CoverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CoverViewController.xib; path = VC/CoverViewController.xib; sourceTree = "<group>"; };
-		695E1B0B1EE6868800D6AA27 /* TextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TextCell.h; path = VC/TextCell.h; sourceTree = "<group>"; };
-		695E1B0C1EE6868800D6AA27 /* TextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TextCell.m; path = VC/TextCell.m; sourceTree = "<group>"; };
-		695E1B0D1EE6868800D6AA27 /* TextCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TextCell.xib; path = VC/TextCell.xib; sourceTree = "<group>"; };
-		695E1B111EE6B02000D6AA27 /* UIViewController+KeyboardNotice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+KeyboardNotice.h"; sourceTree = "<group>"; };
-		695E1B121EE6B02000D6AA27 /* UIViewController+KeyboardNotice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = "UIViewController+KeyboardNotice.m"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		6989BE001F0F5CCB00CC92BF /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		6989BE011F0F5CCB00CC92BF /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6989BE021F0F5CCB00CC92BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6989BE041F0F5CCB00CC92BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6989BE061F0F5CCB00CC92BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6989BE071F0F5CCB00CC92BF /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6989BE0A1F0F5CCB00CC92BF /* KeyboardX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyboardX.h; sourceTree = "<group>"; };
+		6989BE0B1F0F5CCB00CC92BF /* KeyboardX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyboardX.m; sourceTree = "<group>"; };
+		6989BE0C1F0F5CCB00CC92BF /* UITextField+ExtentRange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+ExtentRange.h"; sourceTree = "<group>"; };
+		6989BE0D1F0F5CCB00CC92BF /* UITextField+ExtentRange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+ExtentRange.m"; sourceTree = "<group>"; };
+		6989BE0F1F0F5CCB00CC92BF /* UIScrollView+KeyboardCover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+KeyboardCover.h"; sourceTree = "<group>"; };
+		6989BE101F0F5CCB00CC92BF /* UIScrollView+KeyboardCover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+KeyboardCover.m"; sourceTree = "<group>"; };
+		6989BE111F0F5CCB00CC92BF /* UIViewController+KeyboardNotice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+KeyboardNotice.h"; sourceTree = "<group>"; };
+		6989BE121F0F5CCB00CC92BF /* UIViewController+KeyboardNotice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+KeyboardNotice.m"; sourceTree = "<group>"; };
+		6989BE131F0F5CCB00CC92BF /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6989BE151F0F5CCB00CC92BF /* CoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoverViewController.h; sourceTree = "<group>"; };
+		6989BE161F0F5CCB00CC92BF /* CoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoverViewController.m; sourceTree = "<group>"; };
+		6989BE171F0F5CCB00CC92BF /* CoverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CoverViewController.xib; sourceTree = "<group>"; };
+		6989BE181F0F5CCB00CC92BF /* IDCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDCardViewController.h; sourceTree = "<group>"; };
+		6989BE191F0F5CCB00CC92BF /* IDCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDCardViewController.m; sourceTree = "<group>"; };
+		6989BE1A1F0F5CCB00CC92BF /* IDCardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IDCardViewController.xib; sourceTree = "<group>"; };
+		6989BE1B1F0F5CCB00CC92BF /* TextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextCell.h; sourceTree = "<group>"; };
+		6989BE1C1F0F5CCB00CC92BF /* TextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextCell.m; sourceTree = "<group>"; };
+		6989BE1D1F0F5CCB00CC92BF /* TextCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextCell.xib; sourceTree = "<group>"; };
+		6989BE1E1F0F5CCB00CC92BF /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		6989BE1F1F0F5CCB00CC92BF /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,7 +70,7 @@
 		695E1AC61EE669DE00D6AA27 = {
 			isa = PBXGroup;
 			children = (
-				695E1AD11EE669DE00D6AA27 /* KeyboardManager */,
+				6989BDFF1F0F5CCB00CC92BF /* LXCKeyboardManager */,
 				695E1AD01EE669DE00D6AA27 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -82,101 +83,69 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		695E1AD11EE669DE00D6AA27 /* KeyboardManager */ = {
+		6989BDFF1F0F5CCB00CC92BF /* LXCKeyboardManager */ = {
 			isa = PBXGroup;
 			children = (
-				695E1AF61EE66A8E00D6AA27 /* ViewController */,
-				695E1AEA1EE66A6200D6AA27 /* KeyboardManager */,
-				695E1AD51EE669DE00D6AA27 /* AppDelegate.h */,
-				695E1AD61EE669DE00D6AA27 /* AppDelegate.m */,
-				695E1AD81EE669DE00D6AA27 /* ViewController.h */,
-				695E1AD91EE669DE00D6AA27 /* ViewController.m */,
-				695E1ADB1EE669DE00D6AA27 /* Main.storyboard */,
-				695E1ADE1EE669DE00D6AA27 /* Assets.xcassets */,
-				695E1AE01EE669DE00D6AA27 /* LaunchScreen.storyboard */,
-				695E1AE31EE669DE00D6AA27 /* Info.plist */,
-				695E1AD21EE669DE00D6AA27 /* Supporting Files */,
+				6989BE001F0F5CCB00CC92BF /* AppDelegate.h */,
+				6989BE011F0F5CCB00CC92BF /* AppDelegate.m */,
+				6989BE021F0F5CCB00CC92BF /* Assets.xcassets */,
+				6989BE031F0F5CCB00CC92BF /* LaunchScreen.storyboard */,
+				6989BE051F0F5CCB00CC92BF /* Main.storyboard */,
+				6989BE071F0F5CCB00CC92BF /* Info.plist */,
+				6989BE081F0F5CCB00CC92BF /* KeyboardManager */,
+				6989BE131F0F5CCB00CC92BF /* main.m */,
+				6989BE141F0F5CCB00CC92BF /* VC */,
+				6989BE1E1F0F5CCB00CC92BF /* ViewController.h */,
+				6989BE1F1F0F5CCB00CC92BF /* ViewController.m */,
+			);
+			path = LXCKeyboardManager;
+			sourceTree = "<group>";
+		};
+		6989BE081F0F5CCB00CC92BF /* KeyboardManager */ = {
+			isa = PBXGroup;
+			children = (
+				6989BE091F0F5CCB00CC92BF /* KeyboardX */,
+				6989BE0E1F0F5CCB00CC92BF /* UIScrollView+KeyboardCover */,
 			);
 			path = KeyboardManager;
 			sourceTree = "<group>";
 		};
-		695E1AD21EE669DE00D6AA27 /* Supporting Files */ = {
+		6989BE091F0F5CCB00CC92BF /* KeyboardX */ = {
 			isa = PBXGroup;
 			children = (
-				695E1AD31EE669DE00D6AA27 /* main.m */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		695E1AEA1EE66A6200D6AA27 /* KeyboardManager */ = {
-			isa = PBXGroup;
-			children = (
-				695E1AEB1EE66A6200D6AA27 /* KeyboardX */,
-				695E1AF01EE66A6200D6AA27 /* UIScrollView+KeyboardCover */,
-			);
-			path = KeyboardManager;
-			sourceTree = "<group>";
-		};
-		695E1AEB1EE66A6200D6AA27 /* KeyboardX */ = {
-			isa = PBXGroup;
-			children = (
-				695E1AEC1EE66A6200D6AA27 /* KeyboardX.h */,
-				695E1AED1EE66A6200D6AA27 /* KeyboardX.m */,
-				695E1AEE1EE66A6200D6AA27 /* UITextField+ExtentRange.h */,
-				695E1AEF1EE66A6200D6AA27 /* UITextField+ExtentRange.m */,
+				6989BE0A1F0F5CCB00CC92BF /* KeyboardX.h */,
+				6989BE0B1F0F5CCB00CC92BF /* KeyboardX.m */,
+				6989BE0C1F0F5CCB00CC92BF /* UITextField+ExtentRange.h */,
+				6989BE0D1F0F5CCB00CC92BF /* UITextField+ExtentRange.m */,
 			);
 			path = KeyboardX;
 			sourceTree = "<group>";
 		};
-		695E1AF01EE66A6200D6AA27 /* UIScrollView+KeyboardCover */ = {
+		6989BE0E1F0F5CCB00CC92BF /* UIScrollView+KeyboardCover */ = {
 			isa = PBXGroup;
 			children = (
-				695E1AF11EE66A6200D6AA27 /* UIScrollView+KeyboardCover.h */,
-				695E1AF21EE66A6200D6AA27 /* UIScrollView+KeyboardCover.m */,
-				695E1B111EE6B02000D6AA27 /* UIViewController+KeyboardNotice.h */,
-				695E1B121EE6B02000D6AA27 /* UIViewController+KeyboardNotice.m */,
+				6989BE0F1F0F5CCB00CC92BF /* UIScrollView+KeyboardCover.h */,
+				6989BE101F0F5CCB00CC92BF /* UIScrollView+KeyboardCover.m */,
+				6989BE111F0F5CCB00CC92BF /* UIViewController+KeyboardNotice.h */,
+				6989BE121F0F5CCB00CC92BF /* UIViewController+KeyboardNotice.m */,
 			);
 			path = "UIScrollView+KeyboardCover";
 			sourceTree = "<group>";
 		};
-		695E1AF61EE66A8E00D6AA27 /* ViewController */ = {
+		6989BE141F0F5CCB00CC92BF /* VC */ = {
 			isa = PBXGroup;
 			children = (
-				695E1B0A1EE6867A00D6AA27 /* cell */,
-				695E1B041EE6833F00D6AA27 /* CoverViewController */,
-				695E1AF71EE67C6E00D6AA27 /* IDCardViewController */,
+				6989BE151F0F5CCB00CC92BF /* CoverViewController.h */,
+				6989BE161F0F5CCB00CC92BF /* CoverViewController.m */,
+				6989BE171F0F5CCB00CC92BF /* CoverViewController.xib */,
+				6989BE181F0F5CCB00CC92BF /* IDCardViewController.h */,
+				6989BE191F0F5CCB00CC92BF /* IDCardViewController.m */,
+				6989BE1A1F0F5CCB00CC92BF /* IDCardViewController.xib */,
+				6989BE1B1F0F5CCB00CC92BF /* TextCell.h */,
+				6989BE1C1F0F5CCB00CC92BF /* TextCell.m */,
+				6989BE1D1F0F5CCB00CC92BF /* TextCell.xib */,
 			);
-			name = ViewController;
-			sourceTree = "<group>";
-		};
-		695E1AF71EE67C6E00D6AA27 /* IDCardViewController */ = {
-			isa = PBXGroup;
-			children = (
-				695E1AFD1EE67FAC00D6AA27 /* IDCardViewController.h */,
-				695E1AFE1EE67FAC00D6AA27 /* IDCardViewController.m */,
-				695E1B021EE67FE500D6AA27 /* IDCardViewController.xib */,
-			);
-			name = IDCardViewController;
-			sourceTree = "<group>";
-		};
-		695E1B041EE6833F00D6AA27 /* CoverViewController */ = {
-			isa = PBXGroup;
-			children = (
-				695E1B051EE6837D00D6AA27 /* CoverViewController.h */,
-				695E1B061EE6837D00D6AA27 /* CoverViewController.m */,
-				695E1B071EE6837D00D6AA27 /* CoverViewController.xib */,
-			);
-			name = CoverViewController;
-			sourceTree = "<group>";
-		};
-		695E1B0A1EE6867A00D6AA27 /* cell */ = {
-			isa = PBXGroup;
-			children = (
-				695E1B0B1EE6868800D6AA27 /* TextCell.h */,
-				695E1B0C1EE6868800D6AA27 /* TextCell.m */,
-				695E1B0D1EE6868800D6AA27 /* TextCell.xib */,
-			);
-			name = cell;
+			path = VC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,12 +207,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				695E1B0F1EE6868800D6AA27 /* TextCell.xib in Resources */,
-				695E1AE21EE669DE00D6AA27 /* LaunchScreen.storyboard in Resources */,
-				695E1ADF1EE669DE00D6AA27 /* Assets.xcassets in Resources */,
-				695E1ADD1EE669DE00D6AA27 /* Main.storyboard in Resources */,
-				695E1B031EE67FE500D6AA27 /* IDCardViewController.xib in Resources */,
-				695E1B091EE6837D00D6AA27 /* CoverViewController.xib in Resources */,
+				6989BE241F0F5CCB00CC92BF /* Info.plist in Resources */,
+				6989BE2D1F0F5CCB00CC92BF /* IDCardViewController.xib in Resources */,
+				6989BE231F0F5CCB00CC92BF /* Main.storyboard in Resources */,
+				6989BE211F0F5CCB00CC92BF /* Assets.xcassets in Resources */,
+				6989BE2F1F0F5CCB00CC92BF /* TextCell.xib in Resources */,
+				6989BE221F0F5CCB00CC92BF /* LaunchScreen.storyboard in Resources */,
+				6989BE2B1F0F5CCB00CC92BF /* CoverViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,36 +224,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				695E1AF51EE66A6200D6AA27 /* UIScrollView+KeyboardCover.m in Sources */,
-				695E1AF41EE66A6200D6AA27 /* UITextField+ExtentRange.m in Sources */,
-				695E1ADA1EE669DE00D6AA27 /* ViewController.m in Sources */,
-				695E1B131EE6B02000D6AA27 /* UIViewController+KeyboardNotice.m in Sources */,
-				695E1B0E1EE6868800D6AA27 /* TextCell.m in Sources */,
-				695E1B001EE67FAC00D6AA27 /* IDCardViewController.m in Sources */,
-				695E1AD71EE669DE00D6AA27 /* AppDelegate.m in Sources */,
-				695E1AD41EE669DE00D6AA27 /* main.m in Sources */,
-				695E1B081EE6837D00D6AA27 /* CoverViewController.m in Sources */,
-				695E1AF31EE66A6200D6AA27 /* KeyboardX.m in Sources */,
+				6989BE201F0F5CCB00CC92BF /* AppDelegate.m in Sources */,
+				6989BE2A1F0F5CCB00CC92BF /* CoverViewController.m in Sources */,
+				6989BE261F0F5CCB00CC92BF /* UITextField+ExtentRange.m in Sources */,
+				6989BE2E1F0F5CCB00CC92BF /* TextCell.m in Sources */,
+				6989BE301F0F5CCB00CC92BF /* ViewController.m in Sources */,
+				6989BE271F0F5CCB00CC92BF /* UIScrollView+KeyboardCover.m in Sources */,
+				6989BE281F0F5CCB00CC92BF /* UIViewController+KeyboardNotice.m in Sources */,
+				6989BE291F0F5CCB00CC92BF /* main.m in Sources */,
+				6989BE251F0F5CCB00CC92BF /* KeyboardX.m in Sources */,
+				6989BE2C1F0F5CCB00CC92BF /* IDCardViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		695E1ADB1EE669DE00D6AA27 /* Main.storyboard */ = {
+		6989BE031F0F5CCB00CC92BF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				695E1ADC1EE669DE00D6AA27 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		695E1AE01EE669DE00D6AA27 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				695E1AE11EE669DE00D6AA27 /* Base */,
+				6989BE041F0F5CCB00CC92BF /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		6989BE051F0F5CCB00CC92BF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6989BE061F0F5CCB00CC92BF /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -386,7 +356,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = EG26B6ALP7;
-				INFOPLIST_FILE = KeyboardManager/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/LXCKeyboardManager/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = lxc.KeyboardManager;
@@ -399,7 +369,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = EG26B6ALP7;
-				INFOPLIST_FILE = KeyboardManager/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/LXCKeyboardManager/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = lxc.KeyboardManager;
