@@ -26,7 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		695E1ACF1EE669DE00D6AA27 /* KeyboardManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeyboardManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		695E1ACF1EE669DE00D6AA27 /* LXCKeyboardManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LXCKeyboardManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		695E1AD31EE669DE00D6AA27 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		695E1AD51EE669DE00D6AA27 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		695E1AD61EE669DE00D6AA27 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -77,7 +77,7 @@
 		695E1AD01EE669DE00D6AA27 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				695E1ACF1EE669DE00D6AA27 /* KeyboardManager.app */,
+				695E1ACF1EE669DE00D6AA27 /* LXCKeyboardManager.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -182,9 +182,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		695E1ACE1EE669DE00D6AA27 /* KeyboardManager */ = {
+		695E1ACE1EE669DE00D6AA27 /* LXCKeyboardManager */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 695E1AE61EE669DE00D6AA27 /* Build configuration list for PBXNativeTarget "KeyboardManager" */;
+			buildConfigurationList = 695E1AE61EE669DE00D6AA27 /* Build configuration list for PBXNativeTarget "LXCKeyboardManager" */;
 			buildPhases = (
 				695E1ACB1EE669DE00D6AA27 /* Sources */,
 				695E1ACC1EE669DE00D6AA27 /* Frameworks */,
@@ -194,9 +194,9 @@
 			);
 			dependencies = (
 			);
-			name = KeyboardManager;
+			name = LXCKeyboardManager;
 			productName = KeyboardManager;
-			productReference = 695E1ACF1EE669DE00D6AA27 /* KeyboardManager.app */;
+			productReference = 695E1ACF1EE669DE00D6AA27 /* LXCKeyboardManager.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -215,7 +215,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 695E1ACA1EE669DE00D6AA27 /* Build configuration list for PBXProject "KeyboardManager" */;
+			buildConfigurationList = 695E1ACA1EE669DE00D6AA27 /* Build configuration list for PBXProject "LXCKeyboardManager" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -228,7 +228,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				695E1ACE1EE669DE00D6AA27 /* KeyboardManager */,
+				695E1ACE1EE669DE00D6AA27 /* LXCKeyboardManager */,
 			);
 		};
 /* End PBXProject section */
@@ -410,7 +410,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		695E1ACA1EE669DE00D6AA27 /* Build configuration list for PBXProject "KeyboardManager" */ = {
+		695E1ACA1EE669DE00D6AA27 /* Build configuration list for PBXProject "LXCKeyboardManager" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				695E1AE41EE669DE00D6AA27 /* Debug */,
@@ -419,7 +419,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		695E1AE61EE669DE00D6AA27 /* Build configuration list for PBXNativeTarget "KeyboardManager" */ = {
+		695E1AE61EE669DE00D6AA27 /* Build configuration list for PBXNativeTarget "LXCKeyboardManager" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				695E1AE71EE669DE00D6AA27 /* Debug */,
