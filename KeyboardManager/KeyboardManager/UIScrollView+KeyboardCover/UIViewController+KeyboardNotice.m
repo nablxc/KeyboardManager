@@ -8,7 +8,12 @@
 
 #import "UIViewController+KeyboardNotice.h"
 #import <objc/runtime.h>
-#import "KeyboardManagerHeader.h"
+
+
+NSString *const kViewDidAppearNotice = @"KeyboardNotice_ViewDidAppear";
+NSString *const kViewWillDisappearNotice = @"KeyboardNotice_ViewWillDisappear";
+NSString *const KNoticeKey = @"KeyboardNotice_NotcieKey";
+
 
 @interface UIViewController()
 
@@ -44,15 +49,15 @@
     }
 
 }
-static char *needNoticeKey = "needNoticeKey";
-- (void)setNeedNotice:(BOOL)needNotice
+static char *isNeedLifecycleNoticeKey = "isNeedLifecycleNotice";
+- (void)setIsNeedLifecycleNotice:(BOOL)isNeedLifecycleNotice
 {
-    objc_setAssociatedObject(self, needNoticeKey, @(needNotice), OBJC_ASSOCIATION_ASSIGN);
+    objc_setAssociatedObject(self, isNeedLifecycleNoticeKey, @(isNeedLifecycleNotice), OBJC_ASSOCIATION_ASSIGN);
 }
 
-- (BOOL)needNotice
+- (BOOL)isNeedLifecycleNotice
 {
-    NSNumber *number = objc_getAssociatedObject(self, needNoticeKey);
+    NSNumber *number = objc_getAssociatedObject(self, isNeedLifecycleNoticeKey);
     return number.boolValue;
 }
 
@@ -62,9 +67,9 @@ static char *needNoticeKey = "needNoticeKey";
     //这时候调用自己，看起来像是死循环
     //但是其实自己的实现已经被替换了
         [self swiz_viewDidAppear:animated];
-    if (self.needNotice == YES)
+    if (self.isNeedLifecycleNotice == YES)
     {
-        [NOTIFICATION_CENTER postNotificationName:NOTIFICATION_DIDAPPEAR object:nil userInfo:@{NOTIFICATION_KEY_VC:self}];
+        [[NSNotificationCenter defaultCenter] postNotificationName:kViewDidAppearNotice object:nil userInfo:@{KNoticeKey:self}];
     }
     
 }
@@ -72,9 +77,9 @@ static char *needNoticeKey = "needNoticeKey";
 - (void)swiz_viewWillDisappear:(BOOL)animated
 {
     [self swiz_viewWillDisappear:animated];
-    if (self.needNotice == YES)
+    if (self.isNeedLifecycleNotice == YES)
     {
-        [NOTIFICATION_CENTER postNotificationName:NOTIFICATION_WILLDISAPPEAR object:nil userInfo:@{NOTIFICATION_KEY_VC:self}];
+        [[NSNotificationCenter defaultCenter] postNotificationName:kViewWillDisappearNotice object:nil userInfo:@{KNoticeKey:self}];
     }
 }
 

@@ -8,8 +8,25 @@
 
 #import "KeyboardX.h"
 #import "UITextField+ExtentRange.h"
-#import "KeyboardManagerHeader.h"
-#define Max_Num 18 //身份证位数
+
+
+static NSString *const keyboardXDelete = @"删除";
+static const CGFloat keyboardXHeight = 220.0f;
+static const NSInteger keyboardMaxNum =  18; //身份证位数
+
+/*16进制颜色*/
+#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+
+#define RGBCOLOR(r,g,b)    [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:1]
+#define RGBACOLOR(r,g,b,a) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:(a)]
+
+
+#define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
+#define SCREEN_WIDTH  [UIScreen mainScreen].bounds.size.width
+
+#define BLACK_COLOR [UIColor blackColor]
+
+#define TOPCAIL_COLOR UIColorFromRGB(0x1dc4ad)
 
 @interface KeyboardX()
 {
@@ -32,7 +49,7 @@
         _keyArr = @[@[@"1",@"2",@"3"],
                     @[@"4",@"5",@"6"],
                     @[@"7",@"8",@"9"],
-                    @[@"X",@"0",Delete],];
+                    @[@"X",@"0",keyboardXDelete],];
         
         _textField.inputView = self;
         
@@ -44,7 +61,7 @@
 }
 
 + (instancetype)keyboardXAddIn:(UITextField  *)textField{
-    return [[self alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, KeyboardX_H)AndTextField:textField];
+    return [[self alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, keyboardXHeight)AndTextField:textField];
 }
 
 - (void)drawRect:(CGRect)rect {
@@ -56,7 +73,7 @@
         {
             
             CGFloat width = (SCREEN_WIDTH - _line * 2) / 3;
-            CGFloat height = (KeyboardX_H - _line * 3) / 4;
+            CGFloat height = (keyboardXHeight - _line * 3) / 4;
             
             UIButton * button = [UIButton buttonWithType:UIButtonTypeCustom];
             button.frame = CGRectMake(j * (width + _line), i * (height + _line), width, height);
@@ -121,7 +138,7 @@
     NSInteger tag = btn.tag;
     NSString *keyStr = _keyArr[tag / 10][tag % 10];
     
-    if (!([keyStr isEqualToString:Delete]))
+    if (!([keyStr isEqualToString:keyboardXDelete]))
     {
         [self addText:keyStr];
     }
@@ -204,7 +221,7 @@
 
 #pragma mark 添加文字
 - (void)addText:(NSString *)keyStr{
-    if (_textField.text.length < Max_Num)
+    if (_textField.text.length < keyboardMaxNum)
     {
         
         NSMutableString *str = [[NSMutableString alloc] initWithString:_textField.text];
@@ -254,7 +271,7 @@
     while (line < 2)
     {
         CGFloat width = (SCREEN_WIDTH - line * 2) / 3;
-        CGFloat height = (KeyboardX_H - line * 3) / 4;
+        CGFloat height = (keyboardXHeight - line * 3) / 4;
         if ([self isInteger:width] && [self isInteger:height])
         {
             return line;

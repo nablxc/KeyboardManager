@@ -8,11 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
+extern NSString *const kViewDidAppearNotice;
+extern NSString *const kViewWillDisappearNotice;
+extern NSString *const KNoticeKey;
+
+
 @interface UIViewController (KeyboardNotice)
 
 /**
  是否需要发通知 优化操作,让系统只发一次通知
  */
-@property (nonatomic,assign)BOOL needNotice;
+@property (nonatomic,assign)BOOL isNeedLifecycleNotice;
 
 @end

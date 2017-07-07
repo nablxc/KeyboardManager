@@ -7,12 +7,11 @@
 //
 
 #import "UIScrollView+KeyboardCover.h"
-#import "KeyboardManagerHeader.h"
 #import <objc/runtime.h>
 #import "UIViewController+KeyboardNotice.h"
 
-#define Observer_Key @"hidden"
-#define For_I 10
+static const NSInteger for_I = 10;
+
 
 @interface UIScrollView()
 
@@ -76,15 +75,15 @@ static char *keyboardBlockKey = "keyboardBlockKey";
 {
     [self removeNotification];
     
-    [NOTIFICATION_CENTER addObserver:self selector:@selector(viewControllerViewDidAppear:) name:NOTIFICATION_DIDAPPEAR object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(viewControllerViewDidAppear:) name:kViewDidAppearNotice object:nil];
     
-    [NOTIFICATION_CENTER addObserver:self selector:@selector(viewControllerViewWiilDisappear:) name:NOTIFICATION_WILLDISAPPEAR object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(viewControllerViewWiilDisappear:) name:kViewWillDisappearNotice object:nil];
     
 }
 //视图已经显示
 - (void)viewControllerViewDidAppear:(NSNotification *)notification
 {
-    if ([self viewController] == notification.userInfo[NOTIFICATION_KEY_VC])
+    if ([self viewController] == notification.userInfo[KNoticeKey])
     {
         [self addKeyboardNotification];
     }
@@ -92,7 +91,7 @@ static char *keyboardBlockKey = "keyboardBlockKey";
 //视图即将消失
 - (void)viewControllerViewWiilDisappear:(NSNotification *)notification
 {
-    if ([self viewController] == notification.userInfo[NOTIFICATION_KEY_VC])
+    if ([self viewController] == notification.userInfo[KNoticeKey])
     {
         [self removeNotification];
     }
@@ -102,7 +101,7 @@ static char *keyboardBlockKey = "keyboardBlockKey";
 - (void)postBindSuccessNotice
 {
     UIViewController *vc = [self viewController];
-    vc.needNotice = YES;
+    vc.isNeedLifecycleNotice = YES;
 }
 
 #pragma mark 键盘默认触摸模式
@@ -114,14 +113,14 @@ static char *keyboardBlockKey = "keyboardBlockKey";
 #pragma mark 键盘监听
 - (void)removeNotification{
     
-    [NOTIFICATION_CENTER removeObserver:self name:UIKeyboardWillChangeFrameNotification object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillChangeFrameNotification object:nil];
 }
 #pragma mark 添加键盘监听
 - (void)addKeyboardNotification{
     
     [self removeNotification];
     
-    [NOTIFICATION_CENTER addObserver:self selector:@selector(keyboardWillChangeFrame:) name:UIKeyboardWillChangeFrameNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillChangeFrame:) name:UIKeyboardWillChangeFrameNotification object:nil];
     
 }
 
@@ -269,7 +268,7 @@ static char *keyboardBlockKey = "keyboardBlockKey";
 
 #pragma mark 找到cell
 - (UIView *)returnCell:(UIView *)son{
-    NSInteger i = For_I;
+    NSInteger i = for_I;
     while (i--) {
         if ([son isKindOfClass:[UITableViewCell class]])
         {
@@ -286,7 +285,7 @@ static char *keyboardBlockKey = "keyboardBlockKey";
 - (UIView *)returnTableViewView:(UIView *)son{
     NSMutableArray *viewArr = [[NSMutableArray alloc] init];
     [viewArr addObject:son];
-    NSInteger i = For_I;
+    NSInteger i = for_I;
     while (i--)
     {
         UIView *view = [[viewArr lastObject] superview];
@@ -309,7 +308,7 @@ static char *keyboardBlockKey = "keyboardBlockKey";
 - (UIView *)returnScroll:(UIView *)son{
     NSMutableArray *viewArr = [[NSMutableArray alloc] init];
     [viewArr addObject:son];
-    NSInteger i = For_I;
+    NSInteger i = for_I;
     while (i--)
     {
         UIView *view = [[viewArr lastObject] superview];
