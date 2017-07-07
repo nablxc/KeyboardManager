@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name         = "KeyboardManager"
+  s.name         = "LXCKeyboardManager"
   s.version      = "1.0.0"
   s.summary      = "身份键盘和自动处理Scroll上的输入框"
  
