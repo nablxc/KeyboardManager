@@ -1,0 +1,26 @@
+//
+//  KeyboardPCH.pch
+//  LXCKeyboardManager
+//
+//  Created by 刘星辰 on 2017/7/7.
+//  Copyright © 2017年 刘星辰. All rights reserved.
+//
+
+#ifndef KeyboardPCH_pch
+#define KeyboardPCH_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#ifdef __OBJC__
+
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+
+#import "Test.h"
+
+
+#endif
+
+
+#endif /* KeyboardPCH_pch */

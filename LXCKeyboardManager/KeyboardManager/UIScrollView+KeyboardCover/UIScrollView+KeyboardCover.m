@@ -20,34 +20,10 @@ static const NSInteger for_I = 10;
 @end
 
 @implementation UIScrollView (KeyboardCover)
-static char *oldFrameKey = "oldFrameKey";
-- (void)setOldFrame:(CGRect)oldFrame
-{
-    NSValue *value = [NSValue valueWithCGRect:oldFrame];
-    objc_setAssociatedObject(self, oldFrameKey, value, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
-
-- (CGRect)oldFrame{
-    
-    NSValue *value = objc_getAssociatedObject(self, oldFrameKey);
-    CGRect oldFrame = [value CGRectValue];
-    return oldFrame;
-}
-
-static char *keyboardBlockKey = "keyboardBlockKey";
-- (void)setKeyboardBlock:(__KeyboardBlock)keyboardBlock
-{
-     objc_setAssociatedObject(self, keyboardBlockKey, keyboardBlock, OBJC_ASSOCIATION_COPY);
-}
-- (__KeyboardBlock)keyboardBlock
-{
-    return objc_getAssociatedObject(self,keyboardBlockKey);
-}
 
 #pragma mark 捆绑方法
 - (void)automaticSolveKeyboardCover
 {
-    
     [self bindHandle];
 }
 #pragma mark 捆绑方法 带键盘弹出的block
@@ -104,12 +80,6 @@ static char *keyboardBlockKey = "keyboardBlockKey";
     vc.isNeedLifecycleNotice = YES;
 }
 
-#pragma mark 键盘默认触摸模式
-- (void)defaultKeyboardDismissMode
-{
-    self.keyboardDismissMode = UIScrollViewKeyboardDismissModeNone;
-}
-
 #pragma mark 键盘监听
 - (void)removeNotification{
     
@@ -133,13 +103,11 @@ static char *keyboardBlockKey = "keyboardBlockKey";
     CGFloat duration = [userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
     UIViewAnimationCurve curve = [userInfo[UIKeyboardAnimationCurveUserInfoKey] integerValue];
     
-    
-    
     void(^animations)() = ^{
         [self _willShowKeyboardFromFrame:beginFrame toFrame:endFrame];
     };
     
-    [UIView animateWithDuration:duration delay:0.0f options:(curve << 16 | UIViewAnimationOptionBeginFromCurrentState) animations:animations completion:^(BOOL finished) {
+    [UIView animateWithDuration:duration delay:0.0f options:curve << 16 | UIViewAnimationOptionBeginFromCurrentState animations:animations completion:^(BOOL finished) {
         
     }];
     
@@ -147,16 +115,27 @@ static char *keyboardBlockKey = "keyboardBlockKey";
 
 - (void)_willShowKeyboardFromFrame:(CGRect)beginFrame toFrame:(CGRect)toFrame
 {
-    BOOL beginFromBotom = (beginFrame.origin.y == [[UIScreen mainScreen] bounds].size.height)?(true):(false);
-    BOOL toBottom = (toFrame.origin.y == [[UIScreen mainScreen] bounds].size.height)?(true):(false);
     id place = [self responderSuperView];
     
-    //只要是结束的frame的y等于屏幕底部,就说明是键盘收回
-    if (toBottom)
+    //排除一个错误的响应
+    if ((beginFrame.origin.y == toFrame.origin.y) && beginFrame.origin.y == [[UIScreen mainScreen] bounds].size.height)
     {
-        if (beginFromBotom) return;
-        [self _willShowBottomHeight:0];
         
+        return;
+    }
+    
+    if (beginFrame.origin.y == [[UIScreen mainScreen] bounds].size.height)
+    {
+        
+        [self _willShowBottomHeight:toFrame.size.height];
+        if (self.keyboardBlock)
+        {
+            self.keyboardBlock(YES, toFrame);
+        }
+    }
+    else if (toFrame.origin.y == [[UIScreen mainScreen] bounds].size.height)
+    {
+        [self _willShowBottomHeight:0];
         if (self.keyboardBlock)
         {
             self.keyboardBlock(NO, toFrame);
@@ -170,17 +149,18 @@ static char *keyboardBlockKey = "keyboardBlockKey";
             self.keyboardBlock(YES, toFrame);
         }
     }
-    [self scrollToSomeWhere:place];
+     [self scrollToSomeWhere:place];
 }
 
 - (void)_willShowBottomHeight:(CGFloat)bottomHeight
 {
-    [UIView animateWithDuration:0.3 animations:^{
+//    [UIView animateWithDuration:0.3 animations:^{
         CGRect rect = self.frame;
         rect.origin.y = 0;
         rect.size.height = self.oldFrame.size.height - bottomHeight;
         self.frame = rect;
-    }];
+    NSLog(@"%@",NSStringFromCGRect(self.oldFrame));
+//    }];
     
 }
 
@@ -245,7 +225,7 @@ static char *keyboardBlockKey = "keyboardBlockKey";
             
             NSIndexPath *index = (NSIndexPath *)indexOrView;
             
-            [tableView scrollToRowAtIndexPath:index atScrollPosition:UITableViewScrollPositionTop animated:NO];
+            [tableView scrollToRowAtIndexPath:index atScrollPosition:UITableViewScrollPositionTop animated:YES];
         }
         else
         {
@@ -346,6 +326,30 @@ static char *keyboardBlockKey = "keyboardBlockKey";
     return nil;
 }
 
+
+
+#pragma mark 设置属性的方法
+- (void)setOldFrame:(CGRect)oldFrame
+{
+    NSValue *value = [NSValue valueWithCGRect:oldFrame];
+    objc_setAssociatedObject(self, @selector(oldFrame), value, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (CGRect)oldFrame{
+    
+    NSValue *value = objc_getAssociatedObject(self, _cmd);
+    CGRect oldFrame = [value CGRectValue];
+    return oldFrame;
+}
+
+- (void)setKeyboardBlock:(__KeyboardBlock)keyboardBlock
+{
+    objc_setAssociatedObject(self, @selector(keyboardBlock), keyboardBlock, OBJC_ASSOCIATION_COPY);
+}
+- (__KeyboardBlock)keyboardBlock
+{
+    return objc_getAssociatedObject(self,_cmd);
+}
 
 
 

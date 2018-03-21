@@ -49,6 +49,8 @@
     
     self.tableView.tableHeaderView = [self tableHeaderView];
     
+    self.tableView.keyboardDismissMode = UIScrollViewKeyboardDismissModeOnDrag;
+    
     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 668 - 64 + 30, 30, 30)];
     view.backgroundColor = [UIColor cyanColor];
     [self.view addSubview:view];

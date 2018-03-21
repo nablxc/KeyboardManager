@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-extern NSString *const kViewDidAppearNotice;
-extern NSString *const kViewWillDisappearNotice;
+/**  */
+extern NSNotificationName const  kViewDidAppearNotice;
+extern NSNotificationName const kViewWillDisappearNotice;
 extern NSString *const KNoticeKey;
 
 

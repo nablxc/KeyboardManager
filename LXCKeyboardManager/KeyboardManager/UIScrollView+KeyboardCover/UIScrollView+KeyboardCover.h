@@ -25,11 +25,6 @@ typedef void(^__KeyboardBlock)(BOOL isShow,CGRect frame);
  */
 - (void)automaticSolveKeyboardCoverWithBlock:(__KeyboardBlock)keyboardBlock;
 
-/**
- 键盘默认触摸模式
- */
-- (void)defaultKeyboardDismissMode;
-
 
 @property (nonatomic,copy)__KeyboardBlock keyboardBlock;
 

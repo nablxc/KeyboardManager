@@ -24,6 +24,7 @@
 		6989BE2E1F0F5CCB00CC92BF /* TextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6989BE1C1F0F5CCB00CC92BF /* TextCell.m */; };
 		6989BE2F1F0F5CCB00CC92BF /* TextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6989BE1D1F0F5CCB00CC92BF /* TextCell.xib */; };
 		6989BE301F0F5CCB00CC92BF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6989BE1F1F0F5CCB00CC92BF /* ViewController.m */; };
+		6989BE591F0FB13200CC92BF /* Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 6989BE581F0FB13200CC92BF /* Test.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,9 @@
 		6989BE1D1F0F5CCB00CC92BF /* TextCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextCell.xib; sourceTree = "<group>"; };
 		6989BE1E1F0F5CCB00CC92BF /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		6989BE1F1F0F5CCB00CC92BF /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		6989BE571F0FB13200CC92BF /* Test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test.h; sourceTree = "<group>"; };
+		6989BE581F0FB13200CC92BF /* Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test.m; sourceTree = "<group>"; };
+		6989BE5A1F0FB22A00CC92BF /* KeyboardPCH.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeyboardPCH.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +90,7 @@
 		6989BDFF1F0F5CCB00CC92BF /* LXCKeyboardManager */ = {
 			isa = PBXGroup;
 			children = (
+				6989BE5A1F0FB22A00CC92BF /* KeyboardPCH.pch */,
 				6989BE001F0F5CCB00CC92BF /* AppDelegate.h */,
 				6989BE011F0F5CCB00CC92BF /* AppDelegate.m */,
 				6989BE021F0F5CCB00CC92BF /* Assets.xcassets */,
@@ -97,6 +102,8 @@
 				6989BE141F0F5CCB00CC92BF /* VC */,
 				6989BE1E1F0F5CCB00CC92BF /* ViewController.h */,
 				6989BE1F1F0F5CCB00CC92BF /* ViewController.m */,
+				6989BE571F0FB13200CC92BF /* Test.h */,
+				6989BE581F0FB13200CC92BF /* Test.m */,
 			);
 			path = LXCKeyboardManager;
 			sourceTree = "<group>";
@@ -225,6 +232,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6989BE201F0F5CCB00CC92BF /* AppDelegate.m in Sources */,
+				6989BE591F0FB13200CC92BF /* Test.m in Sources */,
 				6989BE2A1F0F5CCB00CC92BF /* CoverViewController.m in Sources */,
 				6989BE261F0F5CCB00CC92BF /* UITextField+ExtentRange.m in Sources */,
 				6989BE2E1F0F5CCB00CC92BF /* TextCell.m in Sources */,
@@ -356,6 +364,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = EG26B6ALP7;
+				GCC_PREFIX_HEADER = LXCKeyboardManager/KeyboardPCH.pch;
 				INFOPLIST_FILE = "$(SRCROOT)/LXCKeyboardManager/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -369,6 +378,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = EG26B6ALP7;
+				GCC_PREFIX_HEADER = LXCKeyboardManager/KeyboardPCH.pch;
 				INFOPLIST_FILE = "$(SRCROOT)/LXCKeyboardManager/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

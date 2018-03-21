@@ -9,9 +9,8 @@
 #import "UIViewController+KeyboardNotice.h"
 #import <objc/runtime.h>
 
-
-NSString *const kViewDidAppearNotice = @"KeyboardNotice_ViewDidAppear";
-NSString *const kViewWillDisappearNotice = @"KeyboardNotice_ViewWillDisappear";
+NSNotificationName const kViewDidAppearNotice = @"KeyboardNotice_ViewDidAppear";
+NSNotificationName const kViewWillDisappearNotice = @"KeyboardNotice_ViewWillDisappear";
 NSString *const KNoticeKey = @"KeyboardNotice_NotcieKey";
 
 
